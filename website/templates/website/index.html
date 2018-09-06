@@ -1,0 +1,69 @@
+<!-- Estendemos do template base -->
+{% extends "website/_layouts/base.html" %}
+
+<!-- Bloco que define o <title></title> da nossa página -->
+{% block title %}Página Inicial{% endblock %}
+
+<!-- Bloco de conteúdo da nossa página -->
+{% block conteudo %}
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Cadastrar Estudante</h5>
+          <p class="card-text">
+            Cadastre aqui um novo <code>Estudante</code>.
+          </p>
+          <a href="{% url 'website:cadastra_estudante' %}"
+             class="btn btn-primary">
+            Novo Estudante
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Lista de Estudantes</h5>
+          <p class="card-text">
+            Veja aqui a lista de <code>Estudantes</code> cadastrados.
+          </p>
+          <a href="{% url 'website:lista_estudantes' %}"
+             class="btn btn-primary">
+            Vá para Lista
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Aniversariantes</h5>
+          <p class="card-text">
+            Veja aqui a lista de <code>Aniversariantes</code> do mês.
+          </p>
+          <a href="{% url 'website:lista_aniversariantes' %}"
+             class="btn btn-primary">
+            Vá para Lista
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Cursos</h5>
+          <p class="card-text">
+            Veja aqui a lista de <code>Cursos</code> cadastrados.
+          </p>
+          <a href="{% url 'website:lista_cursos' %}"
+             class="btn btn-primary">
+            Vá para Lista
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
